@@ -1519,6 +1519,7 @@ body{
 .news-single .news-text p {
 	font-size: 14px;
 	margin-bottom:20px;
+	text-align: justify;
 }
 /* Image Gallery */
 .news-single .image-gallery {
