@@ -2439,6 +2439,12 @@ body{
     font-weight: 500;
 }
 
+.title-home-horizontal-new a{
+	color: #2C2D3F;
+    font-weight: 600;
+	font-size: 20px;
+}
+
 .big-new, .small-new, .horizontal-new{
 	box-shadow: 0px 0px 10px #00000014;
 }
