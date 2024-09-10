@@ -2,6 +2,7 @@
 
 (function($) {
 	"use strict";
+
 	$(document).on('ready', function() {
 	
 		jQuery(window).on('scroll', function() {
@@ -30,7 +31,8 @@
 			prependTo:".mobile-nav",
 			duration: 300,
 			closeOnClick:true,
-		});
+			removeIds: false,
+		})
 		
 		/*===============================
 			Index Slider JS
@@ -97,39 +99,62 @@
 		Preloader JS
 	======================*/
 	$(window).on('load', function() {
-		$('.preloader').addClass('preloader-deactivate');
+		console.log($(".goog-te-combo"));
+
 		
+		// miniLoader($('.container-mini-loader'),'sm')
 		
+		var language = localStorage.getItem("language")
+		if(!language){
+			$(".goog-te-combo").val("es");
+			localStorage.setItem("language", "es");
+		}
+		else{
+			$(".goog-te-combo").val(language);
+		}
+		// var languageSelect = $('.goog-te-combo option:selected').val();
+		$('.languageSwitcher').val(language).trigger('change');
+
+		$('.container-languageSwitcher').removeClass('d-none');
 		
-		miniLoader($('.container-mini-loader'),'sm')
+		// Tiempo de espera para que cargue selector de palabras con trauduccion
 		setTimeout(() => {
-			$(".goog-te-combo").val('es');
-			var languageSelect = $('.goog-te-combo option:selected').val();
-			// console.log(languageSelect);
-			// Esto no esta funcionando con dynamic-select, hay q buscar la forma de setear option
-			// Manejar idioma en localstorage para mantener idioma al cambiar pagina o f5
-			// $('#languageSwitcher').val(languageSelect);
-			$('.container-mini-loader').html('');
-			$('.container-languageSwitcher').removeClass('d-none');
-
-			languageSelect = document.querySelector("select.goog-te-combo");
-			languageSelect.value = $('.goog-te-combo option:selected').val();
-			languageSelect.dispatchEvent(new Event("change"));
-
+			$('.preloader').addClass('preloader-deactivate');			
 		}, 900);
 
-		new DynamicSelect('#languageSwitcher', {
-			width: '180px',
-			height: '40px',
-			onChange: function(value, text, option) {
-				var lang = value;
-				$(".goog-te-combo").val(lang);
-				var languageSelect = document.querySelector("select.goog-te-combo");
-				languageSelect.value = lang;
-				languageSelect.dispatchEvent(new Event("change"));
-
-			}
+		$('.languageSwitcher').select2({
+			templateResult: formatOption,
+			templateSelection: formatOption,
+			minimumResultsForSearch: -1, // Opcional: para deshabilitar el buscador si no lo necesitas
+			width: '160px'
 		});
+
+		var isSyncing = false;
+		$('.languageSwitcher').on('change', function() {
+			console.log('entro de nuevo')
+			if (isSyncing) return;
+			isSyncing = true;
+			var selectedValue = $(this).val();
+			$('.languageSwitcher').not(this).val(selectedValue).trigger('change');
+			isSyncing = false;
+
+			localStorage.setItem("language", selectedValue);
+
+			var lang = selectedValue;
+			$(".goog-te-combo").val(lang);
+			var languageSelect = document.querySelector("select.goog-te-combo");
+			languageSelect.value = lang;
+			languageSelect.dispatchEvent(new Event("change"));
+
+			// var language = document.getElementsByClassName("languageSwitcher").value;
+			// var googleTranslateElement = document.querySelector('select.goog-te-combo');
+			
+			// if (googleTranslateElement) {
+			//   googleTranslateElement.value = language;
+			//   googleTranslateElement.dispatchEvent(new Event('change'));
+			// }
+
+		  });		
 
 	});
 	
@@ -291,4 +316,22 @@ function miniLoader(contenedor, size, contraste=''){
             </div>
         </div>`
     );
+}
+
+function formatOption(option) {
+	if (!option.id) {
+		return option.text;
+	}
+
+	// Obtener la imagen de la opción seleccionada usando data-img-src
+	var imgSrc = $(option.element).data('img-src');
+	if (!imgSrc) {
+		return option.text;
+	}
+
+	// Crear la estructura con imagen y texto
+	var $option = $(
+		'<span><img src="' + imgSrc + '" class="img-option" style="width: 30px; height: 30px; margin-right: 5px;" /> ' + option.text + '</span>'
+	);
+	return $option;
 }

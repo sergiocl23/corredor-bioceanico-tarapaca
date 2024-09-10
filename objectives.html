@@ -29,8 +29,11 @@
         <link rel="stylesheet" href="css/animate.min.css">
 		<!-- Fancyapss CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-		
+		<!-- Select2 -->
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 		<!-- Custom CSS -->
+        <link rel="stylesheet" href="css/mini-loader.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
@@ -51,7 +54,7 @@
 		<header class="header" >
 			<!-- Header Inner -->
 			<div class="header-inner">
-				<div class="container">
+				<div class="container-fluid container-xl">
 					<div class="inner">
 						<div class="row">
 							<div class="col-md-4 col-12">
@@ -95,54 +98,19 @@
 													</ul>
 												</li>
 												<li><a href="contact.html">Contacto </a></li>
-												<!-- <li class="d-md-none">
-													<div class="social-upper d-flex align-items-center justify-content-center">
-														<a href="https://www.instagram.com/cbioceanicotarapaca/" target="_blank">
-															<div class="social-upper-item">
-																<i class="icofont-instagram"></i>
-															</div>
-														</a>
-														<a href="https://www.facebook.com/profile.php?id=61559894535636" target="_blank">
-															<div class="social-upper-item">
-																<i class="icofont-facebook"></i>
-															</div>
-														</a>
-														<a href="https://x.com/CBtarapaca" target="_blank">
-															<div class="social-upper-item">
-																<i class="icofont-x"></i>
-															</div>
-														</a>
-														<a href="https://www.linkedin.com/in/corredor-bioce%C3%A1nico-tarapac%C3%A1-026485310/" target="_blank">
-															<div class="social-upper-item">
-																<i class="icofont-linkedin"></i>
-															</div>
-														</a>
+												<li class="language-li" style="min-width: 160px;">
+													<div class="container-languageSwitcher d-none d-flex align-items-start align-items-md-center justify-content-center h-100">
+														<div id="google_translate_element"></div>
+														<select class="form-control w-100 languageSwitcher" name="language">
+															<option data-img-src="img/espana.png" value="es">Español</option>
+															<option data-img-src="img/estados-unidos.png" value="en">Inglés</option>
+															<option data-img-src="img/brasil.png" value="pt">Portugués</option>
+														</select>					
 													</div>
-												</li> -->
+													<div class="container-mini-loader"></div>
+												</li>
 											</ul>
 										</nav>
-										<!-- <div class="social-upper d-none d-lg-flex align-items-center">
-											<a href="https://www.instagram.com/cbioceanicotarapaca/" target="_blank">
-												<div class="social-upper-item">
-													<i class="icofont-instagram"></i>
-												</div>
-											</a>
-											<a href="https://www.facebook.com/profile.php?id=61559894535636" target="_blank">
-												<div class="social-upper-item">
-													<i class="icofont-facebook"></i>
-												</div>
-											</a>
-											<a href="https://x.com/CBtarapaca" target="_blank">
-												<div class="social-upper-item">
-													<i class="icofont-x"></i>
-												</div>
-											</a>
-											<a href="https://www.linkedin.com/in/corredor-bioce%C3%A1nico-tarapac%C3%A1-026485310/" target="_blank">
-												<div class="social-upper-item">
-													<i class="icofont-linkedin"></i>
-												</div>
-											</a>
-										</div> -->
 									</div>
 								</div>
 								<!--/ End Main Menu -->
@@ -357,11 +325,27 @@
 		<!-- Wow JS -->
 		<script src="js/wow.min.js"></script>
 		<!-- Waypoint CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src="js/waypoints.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.4"></script>
+
 		<!-- Fancyapss JS -->
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+		
+		<!-- Select2 -->
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+		<!-- Cambio de idioma -->
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+			//   new google.translate.TranslateElement({ pageLanguage: 'ES' },'google_translate_element');
+			  	new google.translate.TranslateElement('google_translate_element');
+			}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
     </body>
