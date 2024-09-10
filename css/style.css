@@ -1455,7 +1455,7 @@ body{
 }
 .news-single .news-title {
 	font-size: 28px;
-	margin: 0px 0px 20px;
+	margin: 0px 0px 10px;
 }
 .news-single .news-title a {
 	color: #252525;
@@ -1772,8 +1772,7 @@ body{
 	margin-bottom: 20px;
 	text-transform: capitalize;
 }
-.news-single .form {
-}
+
 .news-single .form-group {
 	position: relative;
 	display: block;
