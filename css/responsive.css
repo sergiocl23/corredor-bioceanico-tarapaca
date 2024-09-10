@@ -18,7 +18,7 @@
 }
 
 /* Tablet Screen */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1050px) {
 	.container-big-new{
 		padding-right: 0px;
 	}
@@ -195,6 +195,16 @@
 
 	.logo-container .logo, .logo-container .title h4{
 		font-size: 17px;
+	}
+
+	.dynamic-select-option-text{
+		font-size: 13px !important;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+	.logo {
+		display: none !important;
 	}
 }
 /* Mobile Screen */

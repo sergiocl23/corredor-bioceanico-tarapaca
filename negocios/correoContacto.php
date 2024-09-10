@@ -68,6 +68,7 @@ if(!empty($_GET["accion"]) || !empty($_POST["accion"])){
 
             
             $destinatarios = [
+                /*
                 [
                     'nombre' => 'Sergio Cerda Lozano',
                     'email' => 'scerdal@unap.cl'
@@ -91,6 +92,11 @@ if(!empty($_GET["accion"]) || !empty($_POST["accion"])){
                 [
                     'nombre' => 'Camila Núñez Concha',
                     'email' => 'caminunez@fia2030.unap.cl'
+                ],
+                */
+                [
+                    'nombre' => 'Equipo Corredor Bioceánico Tarapacá',
+                    'email' => 'contactocb@corredor-bioceanico-tarapaca.cl'
                 ],
             ];
 

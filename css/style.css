@@ -583,7 +583,7 @@ body{
 	Start Team CSS
 ======================*/ 
 .team{
-	background-image:url('../img/testi-bg.jpg');
+	background-image:url('../img/blockqoute-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -1534,7 +1534,7 @@ body{
 }
 /* Blockqoute */
 .news-single blockquote {
-	background-image: url('img/blockqoute-bg.jpg');
+	background-image: url('../img/blockqoute-bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2429,7 +2429,6 @@ body{
 
 .details-big-new{
 	font-weight: 400;
-    text-transform: capitalize;
     font-size: 13px;
     letter-spacing: 0px;
     line-height: 23px;
@@ -2477,10 +2476,59 @@ body{
 	display: none;
 }
 
-#languageSwitcher{
-	text-transform: capitalize; min-width: 130px;
+.goog-logo-link {
+    display: none !important;
 }
 
-/* #goog-gt-tt{
+.goog-te-gadget {
+    display: none !important;
+}
+
+.language-li{
+	min-width: 130px;
+}
+
+.select2-results__option, .selection{
+	text-transform: capitalize !important;
+}
+
+.team-member-name{
+	font-size: 19px !important;
+}
+
+/* Ajustar el tamaño de fuente y altura del select */
+.select2-container .select2-selection--single {
+    height: 40px; /* Altura del select */
+	text-align: start;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 40px; /* Alinear el texto verticalmente */
+}
+
+/* Ajustar el tamaño de las opciones en el dropdown */
+.select2-container .select2-results__option {
+	padding: 10px; /* Espaciado de las opciones */
+	text-align: start;
+}
+
+/* Ocultar ventana de texto original */
+#goog-gt-tt {
 	display: none !important;
-} */
+}
+
+/* Ocultar efecto hover sobre texto traducido */
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+    background-color: white !important;
+	box-shadow: 2px 2px 4px white !important;
+}
+
+/* Ocultar loader google translate */
+.VIpgJd-ZVi9od-aZ2wEe-OiiCO.VIpgJd-ZVi9od-aZ2wEe-OiiCO-ti6hGc {
+    display: none !important;
+}
+.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q {
+    /* display: none !important; */
+	background-color: transparent !important;
+	box-shadow: 2px 2px 4px transparent !important;
+}

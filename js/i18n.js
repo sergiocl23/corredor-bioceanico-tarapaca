@@ -31,7 +31,7 @@ $(function () {
         //     }
         //     $('#languageSwitcher').append(opt);
         // });
-        $('#languageSwitcher').change((a, b, c) => {
+        $('.languageSwitcher').change((a, b, c) => {
             const chosenLng = $(this).find("option:selected").attr('value');
             i18next.changeLanguage(chosenLng, () => {
             rerender();
