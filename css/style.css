@@ -2538,3 +2538,10 @@ body{
 	background-color: transparent !important;
 	box-shadow: 2px 2px 4px transparent !important;
 }
+
+figcaption {
+	font-size: 13px;
+	text-align: center;
+	font-weight: 500;
+	font-style: oblique;
+}
