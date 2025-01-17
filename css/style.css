@@ -112,7 +112,7 @@ body{
 }
 
 /* Dropdown Menu */
-.header .nav li .dropdown-nosotros {
+.header .nav li .dropdown-header {
 	background: var(--white);
 	width: 220px;
 	position: absolute;
@@ -133,24 +133,24 @@ body{
 	/* border-left:3px solid var(--blue); */
 }
 
-.header .nav li .dropdown-nosotros li.active {
+.header .nav li .dropdown-header li.active {
 	border-left:3px solid var(--blue) !important;
 }
 
-.header .nav li:hover .dropdown-nosotros{
+.header .nav li:hover .dropdown-header{
 	opacity:1;
 	visibility:visible;
 	transform:translateY(0px);
 }
-.header .nav li .dropdown-nosotros li{
+.header .nav li .dropdown-header li{
 	float:none;
 	margin:0;
 	border-bottom:1px dashed #eee;
 }
-.header .nav li .dropdown-nosotros li:last-child{
+.header .nav li .dropdown-header li:last-child{
 	border:none;
 }
-.header .nav li .dropdown-nosotros li a {
+.header .nav li .dropdown-header li a {
 	padding: 12px 15px;
 	color: #666;
 	display: block;
@@ -161,16 +161,16 @@ body{
 	-moz-transition:all 0.2s ease;
 	transition:all 0.2s ease;
 }
-.header .nav li .dropdown-nosotros li a:before{
+.header .nav li .dropdown-header li a:before{
 	display:none;
 }
-.header .nav li .dropdown-nosotros li:last-child a{
+.header .nav li .dropdown-header li:last-child a{
 	border-bottom:0px;
 }
-.header .nav li .dropdown-nosotros li:hover a{
+.header .nav li .dropdown-header li:hover a{
 	color:var(--blue);
 }
-.header .nav li .dropdown-nosotros li a:hover{
+.header .nav li .dropdown-header li a:hover{
 	border-color:transparent;
 }
 
@@ -307,6 +307,11 @@ body{
 }
 .owl-item.active .single-slider .button{
     animation: fadeInDown 1s both 1.5s;
+}
+
+.news-slider .item{
+    cursor: zoom-in;
+	margin: 0px 16px;
 }
 /*===========================
 	End Slider Area CSS
@@ -2065,7 +2070,7 @@ body{
 	font-size: 14px;
 }
 
-.dropdown-nosotros li {
+.dropdown-header li {
 	list-style-type: none;
 }
 
@@ -2490,16 +2495,12 @@ body{
     display: none !important;
 }
 
-.language-li{
-	min-width: 130px;
-}
-
 .select2-results__option, .selection{
 	text-transform: capitalize !important;
 }
 
 .team-member-name{
-	font-size: 19px !important;
+	font-size: 18px !important;
 }
 
 /* Ajustar el tamaño de fuente y altura del select */
@@ -2544,4 +2545,19 @@ figcaption {
 	text-align: center;
 	font-weight: 500;
 	font-style: oblique;
+}
+
+.event-date{
+	font-weight: bold; 
+	font-size: 10px; 
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.event-name{
+	line-height: 10px;
+}
+
+.career{
+	font-size: 11.5px;
+	font-weight: 400;
 }

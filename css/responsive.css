@@ -83,12 +83,12 @@
 		font-weight: 500;
 		padding: 23px 4px;
 	}
-	.header .nav li .dropdown-nosotros {
+	.header .nav li .dropdown-header {
 		width: 200px;
 		left: -20px;
 		top: 65px;
 	}
-	.header .nav li .dropdown-nosotros li a {
+	.header .nav li .dropdown-header li a {
 		padding: 10px 15px;
 		font-size: 13px;
 	}
@@ -319,11 +319,11 @@
 	.slicknav_nav li:hover a{
 		/* color:var(--blue); */
 	}
-	.slicknav_nav li .dropdown-nosotros li a{
+	.slicknav_nav li .dropdown-header li a{
 		color:#2C2D3F;
 		background:transparent;
 	}
-	.slicknav_nav li .dropdown-nosotros li a:hover{
+	.slicknav_nav li .dropdown-header li a:hover{
 		color:var(--blue);
 	}
 	.slicknav_nav li .slicknav_item{

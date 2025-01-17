@@ -557,10 +557,11 @@ body {
 }
 
 hr {
-	background-color: #ccc;
+	/* background-color: #ccc; */
+	background-color: rgba(0,0,0,0.5);
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 }
 
 ul,ul li{

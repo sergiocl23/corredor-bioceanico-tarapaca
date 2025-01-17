@@ -49,6 +49,19 @@
 			navText: ['<div class="d-flex align-items-center justify-content-center"><i class="icofont-duotone icofont-angle-double-left"></i></div>', '<div class="d-flex align-items-center justify-content-center"><i class="icofont-duotone icofont-angle-double-right"></i></div>'],
 			dots:false,
 		});
+
+		$(".news-slider").owlCarousel({
+			loop:true,
+			autoplay:true,
+			smartSpeed: 500,
+			autoplayTimeout:3500,
+			singleItem: true,
+			autoplayHoverPause:true,
+			items:2,
+			nav:true,
+			navText: ['<div class="d-flex align-items-center justify-content-center"><i class="icofont-duotone icofont-angle-double-left"></i></div>', '<div class="d-flex align-items-center justify-content-center"><i class="icofont-duotone icofont-angle-double-right"></i></div>'],
+			dots:false,
+		});
 		
 		/*=====================================
 			Counter Up JS
@@ -126,7 +139,7 @@
 			templateResult: formatOption,
 			templateSelection: formatOption,
 			minimumResultsForSearch: -1, // Opcional: para deshabilitar el buscador si no lo necesitas
-			width: '160px'
+			width: '65px'
 		});
 
 		var isSyncing = false;
