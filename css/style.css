@@ -2561,3 +2561,8 @@ figcaption {
 	font-size: 11.5px;
 	font-weight: 400;
 }
+
+.team-item{
+	max-width: 291px !important;
+	margin: 0 auto;
+}
